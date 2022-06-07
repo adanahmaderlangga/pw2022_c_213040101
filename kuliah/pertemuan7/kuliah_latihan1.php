@@ -25,7 +25,7 @@ $nama= $_GET ["nama"]
         <a href="kuliah_latihan1.php?nama=ALUCARD">ALUCARD</a>
     </li>
     <li>
-        <a href="?nama=SANDIKA">SANDIKA</a>
+        <a href="?nama=michel">michel</a>
     </li>
     <li>
         <a href="?nama=ADAN AHMAD ERLANGGA">ADAN AHMAD ERLANGGA</a>

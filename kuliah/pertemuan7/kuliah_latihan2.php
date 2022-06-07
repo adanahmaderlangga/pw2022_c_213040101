@@ -2,11 +2,11 @@
 $mahasiswa = [
     [
         "#" => "1",
-        "nama" => "ADAN AHMAD ERLANGGA", 
+        "nama" => "Adan Ahmad Erlangga", 
         "npm" => "213040101", 
         "jurusan" => "Teknik Informatika",
         "email" => "adan.213040101@mail.unpas.ac.id",
-        "gambar" => "squidward.JPG"
+        "gambar" => "Angga.JPG"
     ],
     [
         "#" => "2",
@@ -14,7 +14,7 @@ $mahasiswa = [
         "npm" => "213040127", 
         "email" => "hakim221@gmail.com", 
         "jurusan" => "mahasiswa marketing",
-        "gambar" => "hakim.JPG"
+        "gambar" => "Mala.JPG"
     ],
     [
         "#" => "3",
@@ -22,7 +22,7 @@ $mahasiswa = [
         "npm" => "213040108",
         "email" => "ariana123@gmail.com",
         "jurusan" =>  "mahasiswa ekonomi",
-        "gambar" => "yusuf.JPG"
+        "gambar" => "Mae.JPG"
     ],
     [
         "#" => "4",
@@ -30,7 +30,7 @@ $mahasiswa = [
         "npm" => "213040109", 
         "email" =>   "saud789@gmail.com",
         "jurusan" => "mahasiswa sastra",
-        "gambar" => "ilham.JPG"
+        "gambar" => "Kurip.JPG"
     ],
 ];
 ?>
@@ -64,8 +64,8 @@ $mahasiswa = [
             <tr>
             <th scope="row" class="align-middle"><?php echo$mhs["#"];?></th>
             <td class="align-middle">
-                <img src="img/<?= $mhs["gambar"]; ?>" height="50" class="rounded-circle">
-            </td>
+                <img src= height="50" class="rounded-circle">
+            </td>"img/<?= $mhs["gambar"]; ?>"
             <td class="align-middle"><?php echo$mhs["nama"]?></td>
             <td class="align-middle">
                 <a href="" class="btn badge bg-warning">edit</a>

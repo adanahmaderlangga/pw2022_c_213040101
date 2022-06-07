@@ -1,4 +1,3 @@
-<?php
 
 // VARIABEL
 // Sebagai tempat menyimpan nilai
