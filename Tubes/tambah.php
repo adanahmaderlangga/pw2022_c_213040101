@@ -57,8 +57,9 @@ if(isset($_POST['tambah'])) {
   <label for="deskripsi" class="form-label">deskripsi</label>
   <textarea class="form-control" name="deskripsi" id="deskripsi" rows="3"></textarea>
 </div>
-  <button type="submit" class="btn btn-primary" name="tambah">Tambah Data</button>
+  <button type="submit" class="btn btn-primary" name="tambah">Tambah Data</button> - <a href="halamanadmin.php" class="btn btn-danger">kembali</a>
 </form>
+
     </div>
 
 

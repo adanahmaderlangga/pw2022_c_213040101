@@ -25,10 +25,12 @@ $tubes = query("SELECT * FROM tugas_besar LIMIT $awaldata, $jumlahdataperhalaman
 if (isset($_GET["cari"])) {
   $keyword= $_GET["keyword"];
   $query= "SELECT * FROM tugas_besar
-          WHERE   
+            WHERE   
+            gambar LIKE '%$keyword%' or
             nama LIKE '%$keyword%' or
-            nama LIKE '%$keyword%'
-          ";
+            youtube LIKE '%$keyword%' or
+            deskripsi LIKE '%$keyword%' 
+            ";
 
   $tubes = query ($query);
 }
@@ -49,7 +51,7 @@ if (isset($_GET["cari"])) {
   </head>
   <body>
     <div class="container">
-      <!--css pdf crlt-p-->
+      <!--css-->
       <style>
         @media print {
           .logout, .kembali, .tambah, .cari, .form-cari, {
@@ -78,7 +80,7 @@ if (isset($_GET["cari"])) {
               <a class="nav-link active" aria-current="page" href="halamanadmin.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="cetak.php">cetak</a>
+              <a class="nav-link text-danger" href="cetak.php" target="_blank">cetak</a>
             </li>
           </ul>
           
@@ -103,7 +105,7 @@ if (isset($_GET["cari"])) {
         
 
             
-        <h1 class="text-black fw-bold text-center m-3" >Selamat datang di Halaman Admin</h1>
+        <h1 class="text-black fw-bold text-center m-3 fst-italic" >Selamat datang di Halaman Admin</h1>
   <div id="container">
         <table class="table">
   <thead>
@@ -129,9 +131,9 @@ if (isset($_GET["cari"])) {
                  <td> <?php echo $tbs['deskripsi']; ?> </td>
                 <td>
                   <a href="ubah.php?id=<?= $tbs["id"] ?>" class="btn btn-sm text-white bg-warning">Ubah</a>
-                  <a href="hapus.php?id=<?= $tbs["id"] ?>" class="btn btn-sm text-white bg-danger" 
-                  onclick="return confirm('apakah anda yaqin?');">Hapus</a>
                 </td>
+                <td><a href="hapus.php?id=<?= $tbs["id"] ?>" class="btn btn-sm text-white bg-danger" 
+                  onclick="return confirm('apakah anda yaqin?');">Hapus</a></td>
               </tr>
               <?php } ?>
   </tbody>
@@ -140,6 +142,7 @@ if (isset($_GET["cari"])) {
   </div>
 
                   <!-- navigasi -->
+                  
         <?php if($halamanaktive > 1) : ?>
           <a href="?halaman=<?= $halamanaktive - 1; ?>">&laquo;</a>
         <?php endif; ?>

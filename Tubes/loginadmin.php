@@ -1,9 +1,10 @@
 <?php 
+// untuk menhubungkan session.
 session_start();
 require 'function.php';
 
 
-// cek cookie
+// cek cookie/ logic login
 if( isset($_COOKIE['id']) && isset($_COOKIE['key']) ) {
         $id= $_COOKIE['id'];
         $key= $_COOKIE['key'];
@@ -18,7 +19,7 @@ if( isset($_COOKIE['id']) && isset($_COOKIE['key']) ) {
           $_SESSION['login'] = true;
         }
     }
-
+        // session (user tidak bisa masuk ke halaman admin sebelum dia login)
         if (isset($_SESSION["login"]) ) {
             header("location: halamanadmin.php");
             exit;
@@ -79,21 +80,22 @@ if (isset($_POST["login"])) {
   <div class="mb-3 text-white">
     <label for="username" class="form-label">username</label>
     <input type="text"  name ="username" class="form-control" id="username" aria-describedby="username" required>
-    <div id="username" class="form-text">Stay with me</div>
   </div>
   <div class="mb-3 text-white" >
     <label for="password" class="form-label">Password</label>
     <input type="password"  name="password" class="form-control" id="password" required>
   </div>
-    <li>
+    <div>
       <input type="checkbox" name="remember" id="remember">
-      <label for="remember">remember me</label>
-      
-    </li>
+      <label for="remember" class="text-white">remember me</label>
+    </div>
+    <br>
   <button type="submit" name="login" class="btn btn-primary ">Login</button>
   <a href="registrasi.php" class="btn btn-success">Buat Akun Baru</a>
   <br>
-  <a href="halamanawal.php" class="text-white" fw-bold>kembali ke Halaman awal</a>
+  <div>
+  <a href="halamanawal.php" class="text-white" fw-bold>kembali</a>
+  </div>
 </form>
     </div>
     

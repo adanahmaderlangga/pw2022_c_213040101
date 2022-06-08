@@ -1,5 +1,6 @@
 <?php 
 require 'function.php';
+
 $tubes = query("SELECT * FROM tugas_besar");
 
 if (isset($_GET["cari"])) {
@@ -56,8 +57,6 @@ if (isset($_GET["cari"])) {
             <li class="nav-item">
               <a class="nav-link" href="#description">Description</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#ulasan vidio">vidio!</a>

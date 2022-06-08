@@ -42,7 +42,7 @@ if(isset($_POST['ubah'])) {
     <div class="container">
         <h1>Form Ubah Data Mahasiswa</h1>
 
-        <a href="halamanadmin.php">Kembali ke halaman admin</a>
+        
 
         <div class="row">
             <div class="col"> 
@@ -72,7 +72,7 @@ if(isset($_POST['ubah'])) {
 
 
 
-                    <button type="submit" class="btn btn-primary" name="ubah">Ubah Data</button>
+                    <button type="submit" class="btn btn-primary" name="ubah">Ubah Data</button> / <a href="halamanadmin.php" class="btn btn-danger">Kembali ke halaman admin</a>
 
                 </form>
 

@@ -7,6 +7,7 @@ if (isset ($_POST["register"]) ) {
         echo "<script>
                 alert('user baru berhasil ditambahkan!');    
               </script>";
+              header("Location: loginadmin.php");
     } else {
         echo mysqli_error($conn);
     }
@@ -30,7 +31,7 @@ if (isset ($_POST["register"]) ) {
 </head>
 <body class="bg-info">
     <div class="row justify-content-center" style="padding-top:8rem;">
-        <h1 class="text-center text-black fw-bold" >Login Admin</h1>
+        <h1 class="text-center text-black fw-bold" >Buat akun Baru</h1>
         <form action="" method="post" class="col-md-4" >
   <div class="mb-3 text-black">
     <label for="username" class="form-label">username</label>
