@@ -1,4 +1,5 @@
 <?php 
+// untuk menghubungkan session
 session_start();
  
 if (!isset($_SESSION["login"]) ) {
@@ -30,7 +31,8 @@ if (isset($_GET["cari"])) {
             nama LIKE '%$keyword%' or
             youtube LIKE '%$keyword%' or
             deskripsi LIKE '%$keyword%' 
-            ";
+            "; 
+            
 
   $tubes = query ($query);
 }
@@ -85,7 +87,7 @@ if (isset($_GET["cari"])) {
           </ul>
           
           <form action="" method="get" class="d-flex navbar-nav me-auto mb-2 mb-lg-0">
-            <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search" id
+            <input class="form-control me-2"  type="search" placeholder="Search" name="keyword" aria-label="Search" id
             ="keyword"/>
             <button class="btn btn-outline-success" type="submit" name="cari" id="tombol-cari">Search</button>
           </form>

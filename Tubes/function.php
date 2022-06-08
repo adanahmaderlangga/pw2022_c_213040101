@@ -1,5 +1,4 @@
 <?php
-
 function koneksi() {
     $conn = mysqli_connect('localhost', 'root', '', 'tubes') or die('KONEKSI GAGAL!'); 
 

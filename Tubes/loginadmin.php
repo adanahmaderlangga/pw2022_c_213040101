@@ -4,7 +4,7 @@ session_start();
 require 'function.php';
 
 
-// cek cookie/ logic login
+// cek cookie/ (otomatis login)
 if( isset($_COOKIE['id']) && isset($_COOKIE['key']) ) {
         $id= $_COOKIE['id'];
         $key= $_COOKIE['key'];
@@ -26,7 +26,7 @@ if( isset($_COOKIE['id']) && isset($_COOKIE['key']) ) {
 }
 
 
-
+// logic login
 if (isset($_POST["login"])) {
       
   $username= $_POST["username"];
@@ -67,7 +67,7 @@ if (isset($_POST["login"])) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <title>login admin</title>
-
+      <!-- logic ketika password salah -->
     <?php if (isset($error)) : ?>
         <p style="color:red ; font-style:italic;">username/ password salah</p>
       <?php endif ; ?>

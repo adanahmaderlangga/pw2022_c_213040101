@@ -1,6 +1,6 @@
 <?php 
 require 'function.php';
-
+// logic register
 if (isset ($_POST["register"]) ) {
 
     if (registrasi($_POST) > 0 ) {

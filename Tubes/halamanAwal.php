@@ -1,8 +1,10 @@
 <?php 
+// menghubungkan ke function
 require 'function.php';
-
+// dari mana data di ambil
 $tubes = query("SELECT * FROM tugas_besar");
 
+// logic cari 
 if (isset($_GET["cari"])) {
             $keyword= $_GET["keyword"];
             $query= "SELECT * FROM tugas_besar
@@ -12,6 +14,7 @@ if (isset($_GET["cari"])) {
             youtube LIKE '%$keyword%' or
             deskripsi LIKE '%$keyword%' 
             ";
+
 
   $tubes = query($query);
 }
@@ -35,7 +38,6 @@ if (isset($_GET["cari"])) {
 
 
     
-
 
     <title>Berpikir Positif Itu Penting!</title>
   </head>
@@ -62,10 +64,11 @@ if (isset($_GET["cari"])) {
               <a class="nav-link" href="#ulasan vidio">vidio!</a>
             </li>
           </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" id="cari" aria-label="Search"/>
-            <button class="btn btn-outline-success" type="submit" name="keyword"  >Search</button>
+          <form action="#ulasan vidio" method="get" class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" id="cari" name="keyword" autocomplete="off" aria-label="Search"/>
+            <button class="btn btn-outline-success" type="submit" name="cari">Search</button>
           </form>
+          
         </div>
       </div>
     </nav>
@@ -218,6 +221,7 @@ if (isset($_GET["cari"])) {
                 <h2>Referensi Beberapa Vidio Untuk Anda!</h2>
               </ul>
               <br>
+              <!-- logic pengambilan data ke database -->
               <?php $i = 1; foreach($tubes as $tbs) { ?> 
                 <br>
               <div class="d-flex position-relative ">
@@ -232,6 +236,7 @@ if (isset($_GET["cari"])) {
                 <?php  } ?>
           </section>
           <br>
+          
       <!-- akhir ulasan vidio -->
   
         
