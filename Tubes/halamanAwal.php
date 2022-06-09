@@ -47,7 +47,7 @@ if (isset($_GET["cari"])) {
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-info fixed-top" >
       <div class="container-fluid">
-        <a class="navbar-brand" href="loginadmin.php">Login</a>
+        <a class="navbar-brand btn btn-outline-primary" href="loginadmin.php">Log in</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -75,33 +75,12 @@ if (isset($_GET["cari"])) {
     <!--akhir navbar-->
 
     <!-- bander -->
-    <div id="slide" class="carousel slide" data-bs-ride="true">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#slide" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#slide" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#slide" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="img/stress.jpg" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item " >
-      <img src="img/ke2.jpg" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item ">
-      <img src="img/oke.jpg" class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#slide" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Kembali</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#slide" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Lanjut</span>
-  </button>
-</div>
-
+    <section class="jumbotron text-center p-5 ">
+      <img src="img/berpikir3.jpg" alt="" width="150" class="rounded-circle img-thumbnail" />
+      <h1 class="display-5 fst-italic">Positif Thinking</h1>
+      <p class="lead">Sering sekali dianggap tak Penting namun Berdampak besar Bagi Kehidupan</p>
+    </section>
+    
     <!-- akhir bander-->
         <!-- description-->
         <section id="description" style="padding-top:5rem;">
@@ -153,6 +132,7 @@ if (isset($_GET["cari"])) {
                     <ul>
 
                       <h2>manfaat-berpikir-positif-untuk-kesehatan-tubuh-dan-jiwa-kamu</h2>
+                      <img src="img/positif.jpg" class="justify-content-center me-3" style="width: 500px;, height:400px;" alt="...">
                       <hr>
                       <h6>1. Mengurangi Stress dan Mencegah Depresi</h6>
                       <p>Dari aspek psikologis, sikap yang menunjukkan negatif dan cenderung pesimis bisa menyebabkan stres dan depresi. Sehingga untuk mengatasinnya, kamu perlu
@@ -182,6 +162,9 @@ if (isset($_GET["cari"])) {
                     </ul>
                     <ul>
                       <h1>Cara Berpikir positif yang bisa kamu lakukan Mulai Sekarang!</h1>
+                      
+                      <img src="img/berpikir2.jpg" class="justify-content-center me-3" style="width:600px;, height:400px;" alt="...">
+                      
                       <hr>
                       <h6>1. Hindari self-talk yang bersifat Negatif</h6>
                       <p>
@@ -204,7 +187,22 @@ if (isset($_GET["cari"])) {
                         Jaga hubungan baik dengan keluarga,teman , dan kerabat yang membuatmu merasa aman ,nyaman , dan dicintai apa adannya.
                         Tumbuhkan pikiran positif mu dengan merawat diri dari dalam dan luar.
                       </p>
+                      <hr>
+                      <h2>Pikiran negatif bisa dengan mudah memengaruhi diri seseorang</h2>
+
+                      <img src="img/stress.jpg" class="justify-content-center me-3" style="width:600px;, height:400px;" alt="...">
+                      <hr>
+                        <p>
+                        Jangan remehkan efek pikiran. Ya, karena tanpa sadar penyebab paling sederhana dari kegagalan maupun keberhasilan yang Anda alami itu berkat pengaruh dari pikiran Anda sendiri. Jadi, ketika pikiran Anda dipenuhi oleh hal-hal yang berbau negatif, lambat laun itu akan memunculkan stres yang akhirnya malah mengacaukan apa yang sedang Anda jalani.
+                        Mudahnya begini, pikiran negatif itu sama saja seperti ketika Anda berbicara dengan diri sendiri. Namun di sini, Anda tidak sedang menyemangati atau mendorong diri Anda untuk terus maju. Sebaliknya, Anda justru menyalahkan dan meremehkan kemampuan yang Anda miliki.
+                        Coba ingat-ingat kembali, pernahkah Anda berpendapat pada diri sendiri mengenai: “Saya tidak akan bisa melakukan hal itu”, “Sepertinya, tidak ada lagi yang bisa diharapkan dari diri saya”, atau bahkan “Untuk apa berjuang, kalau pada akhirnya saya tetap gagal juga”.
+                        Mungkin terlihat sepele, tapi segelintir ucapan itulah yang tenyata berdampak cukup besar pada pikiran, tubuh, hingga hidup Anda.
+                        Intinya, bicara hal yang negatif dengan diri sendiri alias negative self talk merupakan sebuah dialog batin yang hanya dilakukan oleh Anda sendiri, tapi bisa membatasi kemampuan dan rasa percaya diri dalam waktu yang bersamaan.
+                        </p>
                     </ul>
+                    
+
+                    
                   </div>
               </div>
               </div>
@@ -224,19 +222,23 @@ if (isset($_GET["cari"])) {
               <!-- logic pengambilan data ke database -->
               <?php $i = 1; foreach($tubes as $tbs) { ?> 
                 <br>
-              <div class="d-flex position-relative ">
-                <img src="img/<?php echo $tbs["gambar"]; ?>" class="flex-shrink-0 me-3" style="width:250px;, height:200px;" alt="...">
+              <div class="position-relative ">
+                <img src="img/<?php echo $tbs["gambar"]; ?>" class="justify-content-center me-3" style="width:250px;, height:200px;" alt="...">
                 <div>
-                  <h5 class="mt-0"><?php echo $tbs["nama"]; ?></h5>
-                  <p><?php echo $tbs["deskripsi"]; ?></p>
+                  <br>
+                  <h5 class="mt-0 fw-bold"><?php echo $tbs["nama"]; ?></h5>
+                  <div class="row justify-content-center fs-6 text-center">
+                  <p class="fst-italic col-md-4"><?php echo $tbs["deskripsi"]; ?></p>
+                  </div>
                   <a href="<?php echo $tbs["youtube"]; ?>" class="stretched-link">Tonton Disini</a>
+                  
                 </div>
               </div>
                 <br>
                 <?php  } ?>
           </section>
           <br>
-          
+               
       <!-- akhir ulasan vidio -->
   
         

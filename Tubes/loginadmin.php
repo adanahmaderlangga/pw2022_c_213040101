@@ -79,7 +79,7 @@ if (isset($_POST["login"])) {
         <form action="" method="post" class="col-md-4" >
   <div class="mb-3 text-white">
     <label for="username" class="form-label">username</label>
-    <input type="text"  name ="username" class="form-control" id="username" aria-describedby="username" required>
+    <input type="text"  name ="username" class="form-control" id="username" autocomplete="off" aria-describedby="username" required>
   </div>
   <div class="mb-3 text-white" >
     <label for="password" class="form-label">Password</label>
